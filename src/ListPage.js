@@ -4,12 +4,12 @@ import Game from './Game';
 
 export default function ListPage() {
   // you'll need some state to hold onto the array of games
-  const [games, setGames] = useState([]);
+  const [games, setGames] = useState([{}]);
 
   useEffect(() => {
     async function getData() {
-      const data = getGames();
-
+      const data = await getGames();
+      console.log('||data', data);
       setGames(data);
     }
     getData();
