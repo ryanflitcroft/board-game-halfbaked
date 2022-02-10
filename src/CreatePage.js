@@ -5,12 +5,12 @@ export default function CreatePage() {
   // you'll need the history hook from react-router-dom to do your redirecting in the handleSubmit
 
   // here's the state you'll need:
-    // title;
-    // genre;
-    // designer;
-    // description;
-    // minPlayers;
-    // maxPlayers;
+  const [title, setTitle] = useState('');
+  const [genre, setGenre] = useState('');
+  const [designer, setDesigner] = useState('');
+  const [description, setDescription] = useState('');
+  const [minPlayers, setMinPlayers] = useState(1);
+  const [maxPlayers, setMaxPlayers] = useState(1);
 
   async function handleSubmit(e) {
     e.preventDefault();
