@@ -17,8 +17,7 @@ export default function AuthPage(props) {
     
   }
     
-  async function handleSignUp(e) {
-    e.preventDefault(e);
+  async function handleSignUp() {
     // sign the user up using the form state
     const user = await signUp(email, password);
     props.setUser(user);
