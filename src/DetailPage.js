@@ -3,7 +3,18 @@ import { useRouteMatch } from 'react-router-dom';
 import { getGameById } from './services/fetch-utils';
 
 export default function DetailPage() {
+
   const [game, setGame] = useState({});
+  const match = useRouteMatch();
+
+  useEffect(() => {
+    console.log('||match: ', match);
+    async function getData() {
+      const data = await getGameById(match.params.id);
+      setGame(data);
+    }
+    getData();
+  }, []);
 
   // on mount, fetch and set in state the correct board game for this id (the id can be found in match.params using the correct react-router hook)
 
