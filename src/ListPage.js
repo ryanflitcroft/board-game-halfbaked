@@ -9,7 +9,6 @@ export default function ListPage() {
   useEffect(() => {
     async function getData() {
       const data = await getGames();
-      console.log('||data', data);
       setGames(data);
     }
     getData();

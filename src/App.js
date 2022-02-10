@@ -37,7 +37,15 @@ export default function App() {
     <Router>
       <div className='App'>
         <header>
-          <button onClick={handleLogout}>Logout</button>
+          {
+            user &&
+            <>
+              <button onClick={handleLogout}>Logout</button>
+              <Link to='/board-games'>Games List</Link>
+              <Link to='/create'>Create Game</Link>
+            </>
+          }
+
           {/* if there is a user in state, render out a link to the board games list, the create page, and add a button to let the user logout */}
         </header>
         <main>
