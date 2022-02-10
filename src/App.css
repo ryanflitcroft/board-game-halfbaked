@@ -34,7 +34,6 @@ a {
 
 .App header .active-link {
   background-color: rgb(250, 185, 63);
-  /* background-color: rgb(106, 250, 250); */
 }
 
 .App main {
@@ -52,7 +51,6 @@ a {
   justify-content: center;
   align-items: center;
 }
-
 
 form { 
   text-align: right;
@@ -80,10 +78,6 @@ select {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-}
-
-.game {
-
 }
 
 .detail {
