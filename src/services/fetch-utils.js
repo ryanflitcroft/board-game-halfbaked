@@ -1,14 +1,15 @@
 import { client, checkError } from './client';
 
 export function getUser() {
+  // console.log('||client', client);
   return client.auth.session();
-
 }
 
 // signs an new user in and puts an auth token in local storage in the browser
 export async function signUp(email, password){
   const response = await client.auth.signUp({ email, password });
-  
+  // console.log('||response', response.session.access_token);
+
   return response.user;
 }
 
@@ -34,7 +35,6 @@ export async function createGame(game){
   return checkError(response);
 }
 
-
 export async function getGames() {
   const response = await client
     .from('board_games')
@@ -43,8 +43,6 @@ export async function getGames() {
 
   return checkError(response);    
 }
-
-
 
 export async function getGameById(id) {
   const response = await client
